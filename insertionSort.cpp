@@ -8,7 +8,7 @@ void insertionSort(int arr[], int size){
 for(int i=1;i<size;i++){
 
 int temp = arr[i];
-
+ 
 int j = i-1;
 
 for(;j>=0; j--){
@@ -28,12 +28,9 @@ arr[j+1]=temp;
 
 }
 
-
-
-
 int main(){
 
-int arr[5] = {2,3,1,5,6};
+int arr[5] = {3,2,1,5,6};
 
 insertionSort(arr,5);
 

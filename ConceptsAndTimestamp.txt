@@ -1,0 +1,34 @@
+LinkedList
+-linked list is linear data structure.
+-linked list is made of nodes.
+-nodes consist of data and address.
+-one node has data as well as the the address of the next node.
+
+USES
+-it is a dynamic data structure.
+-it can be shriked as well as grown at run time.
+-it is memory efficient.
+-After deletion and insertion no shifts are needed.
+
+Disadvantages
+
+
+
+
+
+
+
+
+
+
+
+
+
+Types of linked List
+
+singly linked list
+
+
+doubly linked list
+circular linked list
+

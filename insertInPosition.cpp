@@ -85,7 +85,6 @@ while(cnt < position){
 prev->next = current->next;
 current->next = NULL;
 delete(current);
-
 }
 
 

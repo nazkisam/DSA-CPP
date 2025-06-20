@@ -37,15 +37,55 @@ tail = temp;
 }
 
 
+void insertAtPos(Node* &head, int pos, int data){
+  
+if(pos == 1){
+  insertAtHead(head,data);
+  return;
+}
+
+
+ 
+ Node* current = head;
+ Node* prev = NULL;
+
+ int cnt = 1;
+
+while(cnt<pos-1){
+  
+  current = current->next;
+  cnt ++;
+}
+Node* nodeToIns = new Node(data);
+nodeToIns->next = current->next;
+nodeToIns->prev = current;
+current->next= nodeToIns;
+
+
+if(nodeToIns->next != NULL){
+  nodeToIns->next->prev = nodeToIns;
+}
+
+}
+ 
+
+
+
+
+
+
+
+
 void print(Node* &head){
   Node* temp = head;
   
 
 
   while(temp!=NULL){
-    cout<<temp->data<<" "<<temp<<endl;
+    
 
     cout<<"prev: "<<temp->prev<<endl;
+    cout<<temp->data<<" "<<temp<<endl;
     cout<<"next: "<<temp->next<<endl;
 
 
@@ -66,13 +106,26 @@ Node* node1 = new Node(1);
 Node* head = node1;
 Node* tail = node1;
 
-insertAtHead(head,2);
+
 insertAtTail(tail,4);
 insertAtTail(tail,5);
+insertAtPos(head,3,22);
 
 
 print(head);
 
 cout<<endl;
+
+//print the list in reverse
+
+Node* temp  = tail;
+while(temp != NULL){
+  cout<<temp->data<<" ";
+  temp = temp->prev;
+
+}
+
+
+
 
 }

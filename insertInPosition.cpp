@@ -50,13 +50,14 @@ void insertInPos(Node* &head, int pos,int data){
   while(count<pos-1){
     temp = temp->next;
     count++;
+  }
    Node* nodeToIns = new Node(data);
    nodeToIns->next = temp->next;
    temp->next =nodeToIns;
 
 
   } 
-}
+
 
 void deleteNode(int position, Node* &head, Node* &tail){
 
@@ -124,9 +125,10 @@ int main(){
 insertAtHead(head,2);
 insertAtTail(tail,4);
 
+insertInPos(head,2,22);
 
 
-deleteNode(1,head,tail);
+//deleteNode(1,head,tail);
 
 print(head);
 

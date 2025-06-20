@@ -1,38 +1,28 @@
 #include<iostream>
+
 using namespace std;
 
- class Node{
-  public:
-  int data;
-  Node* next;
+class Node{
+ public:
+ int data;
+ Node* next;
 
+ //constructor
 
-//constructor
-
-Node(int data){
+ Node(int data){
   this -> data = data;
   this -> next = NULL;
-}
-
+ }
 };
+
+
 
 int main(){
 
-//creating the first node. 
- Node* head = new Node(1);
- Node* current = head;
+Node* node1 = new Node(10);
 
-//creating the rest of the nodes.
-for(int i=2;i<=10;i++){
- Node* newNode = new Node(i);
- current -> next =  newNode;
- current = newNode;
-}
+cout<< node1 -> data<<endl;
+cout<<node1 ->next<<endl;
 
-Node* temp = head;
-while(temp != NULL){
-  cout<<temp -> data <<" ";
-  temp = temp->next;
-}
 return 0;
 }

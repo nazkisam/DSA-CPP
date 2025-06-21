@@ -9,13 +9,11 @@ class Node{
 
  //constructor
 
- Node(int data){
+Node(int data){
   this->data = data;
   this->prev = NULL;
   this->next = NULL;
  }
-
-
 };
 
 
@@ -43,11 +41,9 @@ if(pos == 1){
   insertAtHead(head,data);
   return;
 }
-
-
  
  Node* current = head;
- Node* prev = NULL;
+ 
 
  int cnt = 1;
 
@@ -56,6 +52,9 @@ while(cnt<pos-1){
   current = current->next;
   cnt ++;
 }
+
+
+
 Node* nodeToIns = new Node(data);
 nodeToIns->next = current->next;
 nodeToIns->prev = current;
@@ -122,10 +121,5 @@ Node* temp  = tail;
 while(temp != NULL){
   cout<<temp->data<<" ";
   temp = temp->prev;
-
 }
-
-
-
-
 }

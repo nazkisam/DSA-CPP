@@ -87,6 +87,8 @@ nodeToIns->next->prev = nodeToIns;
 
 void deleteNode(int position, Node* &head , Node* &tail){
 
+
+
   if(position == 1){
   Node* temp = head;
   head = head->next;

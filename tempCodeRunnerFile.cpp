@@ -1,4 +1,4 @@
 
-if(nodeToIns->next != NULL){
-  nodeToIns->next->prev = nodeToIns;
-}
+
+    // handling greater then two nodes.
+    else if(tail == current){

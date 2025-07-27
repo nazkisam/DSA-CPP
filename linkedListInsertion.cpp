@@ -19,7 +19,7 @@ void insertAtHead(Node* &head , int d){
  
  Node* temp = new Node(d);
  temp->next= head;
-head  = temp;
+ head  = temp;
 }
 
 void insertAtTail(Node* &tail, int d){
@@ -37,22 +37,33 @@ void print(Node* &head){
 Node* temp = head;
 
 while(temp!=NULL){
-  cout<<temp->data<<" ";
+  cout<<temp<<" "<<temp->data<<" "<<temp->next<<" ";
   temp= temp->next;
 }
-
-
-
-
 }
 
+
+Node* reverseLinkedList(Node* &head,Node* &tail){
+  Node* prev = NULL;
+  Node* curr = head;
+  Node* forward = NULL;
+
+  while(curr!=NULL){
+  forward = curr->next;
+  curr->next = prev;
+  prev = curr;
+  curr = forward;
+  }
+  return prev;
+
+}
 
 int main(){
 
 Node* node1 = new Node(1);
 Node* head = node1;
 Node* tail = node1;
-cout<<head<<" ";
+
 
 
 insertAtTail(tail,3);
@@ -61,6 +72,11 @@ insertAtTail(tail,8);
 
 print(head);
 
+cout<<endl;
 
-
+Node* reversed =reverseLinkedList(head,tail);
+while(reversed != NULL){
+cout<<" "<<reversed<<" " <<reversed->data<<" "<<reversed->next<<" ";
+reversed = reversed->next;
+}
 }

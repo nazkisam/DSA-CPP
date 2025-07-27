@@ -97,13 +97,7 @@ void deleteNode(int value, Node* &head, Node* &tail){
     delete current;
 
   }
-
-
-
-
-
-
-
+  
 void print(Node* &head){
   Node* temp = head;
 

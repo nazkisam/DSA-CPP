@@ -13,6 +13,27 @@ USES
 Disadvantages
 
 
+itration 0
+ temp = 1, cnt  = 0, 0<5 -> true then  temp = 2, cnt =1 
+
+itration 1
+temp = 2, cnt = 1,  1<5 ->true then temp = 3 ,cnt =2
+
+iteration 2
+temp = 3, cnt = 2,  2<5 -> true then temp = 4 ,cnt =3
+
+iteration 3
+temp = 4, cnt = 3, 3<5 ->true then temp = 5, cnt  = 4
+
+iteration 4 
+temp = 5 cnt = 4, 4<5 ->true then temp = 6, cnt = 5
+
+iteration 5 
+temp = 6, cnt 5, 5<5 -> flase we come out of loop
+
+
+
+
 
 
 
